@@ -5,7 +5,7 @@ const teamImg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3
 const docs = [
   { n: "د. عبد الرحمن يسري", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/24bedaa91_image.png" },
   { n: "د. محمد عنتر", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/180b1e4f3_image.png" },
-  { n: "د. مروى مسعد", pos: "50% 55%" },
+  { n: "د. مروى مسعد", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/d832992a8_image.png" },
   { n: "د. ماير ميشيل", pos: "75% 55%" },
   { n: "د. عمر سنبل", pos: "100% 55%" },
 ];
