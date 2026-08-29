@@ -12,7 +12,7 @@ const slides = [
   "استمتع بالحديقة والممشى على مدار 24 ساعة",
 ];
 
-const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/b8a13768b_generated_image.png";
+const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/2ac6403f8_generated_image.png";
 const wallLogo = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/cb0c3af7c_Screenshot2026-07-26144441.png";
 
 export default function Hero() {
@@ -31,18 +31,7 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: "saturate(1.06) contrast(1.04) brightness(1.02)" }}
       />
-      {/* Logo carved/engraved directly into the wall surface (no frame/plaque) */}
-      <Image
-        src={wallLogo}
-        fittingType="fit"
-        alt="شعار عيادات دكتور توم البيطرية المتقدمة منحوت بالجدار"
-        className="absolute z-[2] top-[7%] left-1/2 -translate-x-1/2 w-[22%] h-[24%] pointer-events-none"
-        style={{
-          filter:
-            "grayscale(0.9) brightness(1.18) contrast(0.6) opacity(0.62) drop-shadow(1px 1px 1px rgba(255,250,240,0.7)) drop-shadow(-1.5px -0.5px 1px rgba(50,42,34,0.55)) drop-shadow(0.5px 0.5px 0.5px rgba(50,42,34,0.3))",
-          mixBlendMode: "multiply",
-        }}
-      />
+
       <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-transparent to-black/30" />
       <div className="absolute z-10 left-4 sm:left-8 top-1/2 -translate-y-1/2 max-w-md text-white">
         <div className="rounded-3xl bg-primary/35 backdrop-blur-md border border-white/20 p-6 sm:p-7 text-right">
