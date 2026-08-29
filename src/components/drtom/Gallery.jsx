@@ -18,7 +18,7 @@ export default function Gallery() {
           {items.map(({ src, t, d }) => (
             <div key={t} className="group relative rounded-3xl overflow-hidden ring-1 ring-white/10 hover:ring-[#4ade80]/40 transition">
               <Image src={src} fittingType="fill" alt={t} className="w-full h-64" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b121c] via-[#0b121c]/30 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#0b121c]/95 via-[#0b121c]/55 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-5">
                 <h3 className="text-white font-extrabold text-lg">{t}</h3>
                 <p className="text-white/75 text-sm mt-1">{d}</p>
