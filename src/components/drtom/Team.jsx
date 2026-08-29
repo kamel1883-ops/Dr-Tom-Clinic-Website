@@ -1,11 +1,13 @@
 import { Image } from "@/components/ui/image";
 
+const teamImg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/bfeb9def0_Screenshot2026-08-29134546.png";
+
 const docs = [
-  { src: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/4dab19d37_generated_image.png", n: "د. عبد الرحمن يسري" },
-  { src: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/becbf38d1_generated_image.png", n: "د. محمد عنتر" },
-  { src: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/676f63855_generated_image.png", n: "د. مروى مسعد" },
-  { src: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/4f0a4c230_generated_image.png", n: "د. ماير ميشيل" },
-  { src: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/e989db5f8_generated_image.png", n: "د. عمر سنبل" },
+  { fpX: 0.11, n: "د. عبد الرحمن يسري" },
+  { fpX: 0.31, n: "د. محمد عنتر" },
+  { fpX: 0.50, n: "د. مروى مسعد" },
+  { fpX: 0.69, n: "د. ماير ميشيل" },
+  { fpX: 0.89, n: "د. عمر سنبل" },
 ];
 
 export default function Team() {
@@ -27,7 +29,7 @@ export default function Team() {
                 {/* إطار دائري أخضر/أزرق */}
                 <div className="absolute inset-0 rounded-full" style={{ background: "conic-gradient(from 200deg, hsl(82 54% 47%) 0deg 180deg, hsl(211 64% 40%) 180deg 360deg)" }} />
                 <div className="absolute inset-[5px] rounded-full bg-white" />
-                <Image src={d.src} fittingType="fill" alt={d.n} className="relative rounded-full w-full h-full object-cover" />
+                <Image src={teamImg} fittingType="fill" focalPointX={d.fpX} focalPointY={0.3} alt={d.n} className="relative rounded-full w-full h-full object-cover" />
               </div>
               <h3 className="mt-4 text-base font-extrabold text-foreground">{d.n}</h3>
               <span className="mt-1 text-xs font-semibold text-brand">طبيب بيطري</span>
