@@ -31,23 +31,15 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: "saturate(1.06) contrast(1.04) brightness(1.02)" }}
       />
-      {/* Carved/engraved logo recessed into the wall: inset shadow panel + desaturated logo */}
-      <div
-        className="absolute z-[1] top-[4%] left-1/2 -translate-x-1/2 w-[26%] h-[30%] rounded-2xl pointer-events-none"
-        style={{
-          backgroundColor: "rgba(228,222,213,0.45)",
-          boxShadow:
-            "inset 0 3px 6px rgba(45,38,30,0.45), inset 0 -2px 4px rgba(255,250,240,0.65), inset 2px 0 5px rgba(45,38,30,0.25), inset -2px 0 5px rgba(45,38,30,0.25), 0 1px 1px rgba(255,250,240,0.4)",
-        }}
-      />
+      {/* Logo carved/engraved directly into the wall surface (no frame/plaque) */}
       <Image
         src={wallLogo}
         fittingType="fit"
         alt="شعار عيادات دكتور توم البيطرية المتقدمة منحوت بالجدار"
-        className="absolute z-[2] top-[4%] left-1/2 -translate-x-1/2 w-[24%] h-[28%]"
+        className="absolute z-[2] top-[7%] left-1/2 -translate-x-1/2 w-[22%] h-[24%] pointer-events-none"
         style={{
           filter:
-            "grayscale(0.55) brightness(1.32) contrast(0.72) opacity(0.85) drop-shadow(0 1px 0.5px rgba(255,250,240,0.55))",
+            "grayscale(0.9) brightness(1.18) contrast(0.6) opacity(0.62) drop-shadow(1px 1px 1px rgba(255,250,240,0.7)) drop-shadow(-1.5px -0.5px 1px rgba(50,42,34,0.55)) drop-shadow(0.5px 0.5px 0.5px rgba(50,42,34,0.3))",
           mixBlendMode: "multiply",
         }}
       />
