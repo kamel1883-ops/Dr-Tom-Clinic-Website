@@ -1,7 +1,7 @@
 import { Image } from "@/components/ui/image";
 import { CheckCircle2 } from "lucide-react";
 
-const img = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/2063d8545_generated_image.png";
+const img = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/b6f7f0643_generated_image.png";
 const points = ["طاقم طبي احترافي", "أجهزة طبية متقدمة", "رفاهية متكاملة"];
 
 export default function Story() {
