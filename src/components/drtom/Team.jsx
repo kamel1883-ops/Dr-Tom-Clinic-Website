@@ -7,7 +7,7 @@ const docs = [
   { n: "د. محمد عنتر", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/180b1e4f3_image.png" },
   { n: "د. مروى مسعد", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/d832992a8_image.png" },
   { n: "د. ماير ميشيل", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/1d4378b22_image.png" },
-  { n: "د. عمر سنبل", pos: "100% 55%" },
+  { n: "د. عمر سنبل", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/435af6a9b_image.png" },
 ];
 
 export default function Team() {
