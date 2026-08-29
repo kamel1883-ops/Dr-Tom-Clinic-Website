@@ -24,15 +24,22 @@ export default function Hero() {
   const go = (d) => setI((p) => (p + d + slides.length) % slides.length);
   return (
     <section id="home" className="relative h-[82vh] min-h-[480px] w-full overflow-hidden">
-      <Image src={bg} fittingType="fill" alt="حيوانات أليفة في عيادة دكتور توم" className="absolute inset-0 w-full h-full object-cover" />
+      <Image
+        src={bg}
+        fittingType="fill"
+        alt="حيوانات أليفة في عيادة دكتور توم"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: "saturate(1.12) contrast(1.06) brightness(1.03)" }}
+      />
       <Image
         src={wallLogo}
         fittingType="fit"
         alt="شعار عيادات دكتور توم البيطرية المتقدمة"
         className="absolute z-[1] top-[1%] right-[31%] w-[18%] h-[30%] mix-blend-multiply"
         style={{
+          opacity: 0.92,
           filter:
-            "drop-shadow(3px 4px 3px rgba(0,0,0,0.45)) drop-shadow(1px 2px 1px rgba(0,0,0,0.3)) drop-shadow(-1.5px -1.5px 0.5px rgba(255,255,255,0.85)) saturate(1.15) contrast(1.05)",
+            "drop-shadow(1px 1px 0 rgba(255,255,255,0.55)) drop-shadow(-1px -1px 0 rgba(255,255,255,0.5)) drop-shadow(4px 5px 6px rgba(0,0,0,0.55)) drop-shadow(2px 3px 2px rgba(0,0,0,0.35)) saturate(0.8) contrast(0.92) brightness(1.08)",
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-black/10" />
