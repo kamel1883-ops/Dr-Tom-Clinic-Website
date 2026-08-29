@@ -12,7 +12,7 @@ const slides = [
   "استمتع بالحديقة والممشى على مدار 24 ساعة",
 ];
 
-const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/1cb82956b_generated_image.png";
+const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/5e365fbdc_generated_image.png";
 
 export default function Hero() {
   const [i, setI] = useState(0);
@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative h-[82vh] min-h-[480px] w-full overflow-hidden">
       <Image src={bg} fittingType="fill" alt="حيوانات أليفة في عيادة دكتور توم" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-primary/90 via-primary/75 to-brand/45" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-black/10" />
       <div className="relative z-10 mx-auto max-w-7xl h-full px-4 flex flex-col items-center justify-center text-center text-white">
         <span className="mb-5 inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold backdrop-blur">
           اختر الخدمة التي تحتاجها لأليفك
