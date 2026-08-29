@@ -29,7 +29,11 @@ export default function Hero() {
         src={wallLogo}
         fittingType="fit"
         alt="شعار عيادات دكتور توم البيطرية المتقدمة"
-        className="absolute z-[1] top-[5%] right-[31%] w-[18%] h-[30%] mix-blend-multiply drop-shadow-lg"
+        className="absolute z-[1] top-[1%] right-[31%] w-[18%] h-[30%] mix-blend-multiply"
+        style={{
+          filter:
+            "drop-shadow(3px 4px 3px rgba(0,0,0,0.45)) drop-shadow(1px 2px 1px rgba(0,0,0,0.3)) drop-shadow(-1.5px -1.5px 0.5px rgba(255,255,255,0.85)) saturate(1.15) contrast(1.05)",
+        }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-black/10" />
       <div className="relative z-10 mx-auto max-w-7xl h-full px-4 flex flex-col items-center justify-center text-center text-white">
