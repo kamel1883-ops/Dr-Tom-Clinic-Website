@@ -6,6 +6,7 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
+import { LanguageProvider } from '@/lib/LanguageContext';
 // Add page imports here
 import Home from '@/pages/Home';
 import PrivacyPolicy from '@/pages/PrivacyPolicy';
@@ -54,7 +55,8 @@ const AuthenticatedApp = () => {
 function App() {
 
   return (
-    <AuthProvider>
+    <LanguageProvider>
+      <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
         <Router>
           <ScrollToTop />
@@ -62,7 +64,8 @@ function App() {
         </Router>
         <Toaster />
       </QueryClientProvider>
-    </AuthProvider>
+      </AuthProvider>
+    </LanguageProvider>
   )
 }
 

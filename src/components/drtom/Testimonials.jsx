@@ -1,38 +1,4 @@
 import { Star, Quote } from "lucide-react";
-
-const reviews = [
-  { n: "R R", d: "شكراً لكل الموظفين وشكراً لكل الكادر الموجود. ما شاء الله اهتمام، وأين ما تروح من تحت حتى تطلع فوق 😍" },
-  { n: "MALAK Li", d: "ممتازين والدكتور مرّه فاهم وممتاز، وتعامل الاستقبال البنات يجنّن. الله يجزاكم خير صدق عيادة تخاف الله." },
-  { n: "HESS", d: "من أول ما تدخل الباب إلى أن تطلع بتصير راضٍ ومبسوط 💘 الطاقم كله لطيف وبشوش ومتعاون ويعرفون يتعاملون مع الحيوانات الأليفة." },
-  { n: "لمياء", d: "من أفضل العيادات التي جبت كلبي لها؛ من الممشى، من الدكاترة، من تعامل الموظفين والمتجر. شكراً لكم عيادة دكتور توم 💞" },
-];
-
-export default function Testimonials() {
-  return (
-    <section id="testimonials" className="py-20 bg-secondary/50">
-      <div className="mx-auto max-w-7xl px-4">
-        <div className="text-center">
-          <span className="text-primary font-bold">آراء عملائنا</span>
-          <h2 className="mt-2 text-3xl font-extrabold text-foreground">نفتخر بآراء عملاءنا</h2>
-        </div>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {reviews.map((r) => (
-            <div key={r.n} className="relative rounded-3xl bg-white border border-border p-6 shadow-sm flex flex-col">
-              <Quote className="absolute top-5 left-5 w-8 h-8 text-primary/15" />
-              <div className="flex gap-1 text-amber-400 mb-3">
-                {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="w-4 h-4 fill-amber-400" />)}
-              </div>
-              <p className="text-sm text-muted-foreground leading-7 flex-1">{r.d}</p>
-              <div className="mt-5 flex items-center gap-3">
-                <div className="grid place-items-center w-10 h-10 rounded-full bg-primary text-white font-bold text-sm">
-                  {r.n.charAt(0)}
-                </div>
-                <span className="font-bold text-foreground text-sm">{r.n}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+import { useLanguage } from "@/lib/LanguageContext";
+const ar=[["R R","شكراً لكل الموظفين وشكراً لكل الكادر الموجود. ما شاء الله اهتمام، وأين ما تروح من تحت حتى تطلع فوق 😍"],["MALAK Li","ممتازين والدكتور مرّه فاهم وممتاز، وتعامل الاستقبال البنات يجنّن. الله يجزاكم خير صدق عيادة تخاف الله."],["HESS","من أول ما تدخل الباب إلى أن تطلع بتصير راضٍ ومبسوط 💘 الطاقم كله لطيف وبشوش ومتعاون ويعرفون يتعاملون مع الحيوانات الأليفة."],["لمياء","من أفضل العيادات التي جبت كلبي لها؛ من الممشى، من الدكاترة، من تعامل الموظفين والمتجر. شكراً لكم عيادة دكتور توم 💞"]];const en=[["R R","Thank you to every member of staff. The attention and care are wonderful from the moment you enter until you leave."],["MALAK Li","Excellent clinic and a truly knowledgeable doctor. The reception team are amazing — a clinic that genuinely cares."],["HESS","From the moment you walk in until you leave, you feel happy and satisfied. The whole team is kind, welcoming and great with pets."],["Lamia","One of the best clinics I have taken my dog to — from the walking area and doctors to the staff and store. Thank you, Dr. Tom."]];
+export default function Testimonials(){const {isArabic}=useLanguage();return <section id="testimonials" className="py-20 bg-secondary/50"><div className="mx-auto max-w-7xl px-4"><div className="text-center"><span className="text-primary font-bold">{isArabic?"آراء عملائنا":"Client reviews"}</span><h2 className="mt-2 text-3xl font-extrabold text-foreground">{isArabic?"نفتخر بآراء عملاءنا":"We value our clients’ feedback"}</h2></div><div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">{(isArabic?ar:en).map(([n,d])=><div key={n} className="relative rounded-3xl bg-white border border-border p-6 shadow-sm flex flex-col"><Quote className="absolute top-5 left-5 w-8 h-8 text-primary/15"/><div className="flex gap-1 text-amber-400 mb-3">{Array.from({length:5}).map((_,i)=><Star key={i} className="w-4 h-4 fill-amber-400"/>)}</div><p className="text-sm text-muted-foreground leading-7 flex-1">{d}</p><div className="mt-5 flex items-center gap-3"><div className="grid place-items-center w-10 h-10 rounded-full bg-primary text-white font-bold text-sm">{n.charAt(0)}</div><span className="font-bold text-foreground text-sm">{n}</span></div></div>)}</div></div></section>}

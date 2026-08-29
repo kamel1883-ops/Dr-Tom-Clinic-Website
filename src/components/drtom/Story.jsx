@@ -1,32 +1,6 @@
 import { Image } from "@/components/ui/image";
 import { CheckCircle2 } from "lucide-react";
-
+import { useLanguage } from "@/lib/LanguageContext";
 const img = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/50b83f965_generated_image.png";
-const points = ["طاقم طبي احترافي", "أجهزة طبية متقدمة", "رفاهية متكاملة"];
-
-export default function Story() {
-  return (
-    <section id="story" className="py-20 bg-secondary/50">
-      <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-10 items-center">
-        <Image src={img} fittingType="fill" focalPointX={0.5} focalPointY={0.4} className="rounded-3xl w-full h-[360px] shadow-xl" />
-        <div>
-          <span className="text-primary font-bold">قصتنا</span>
-          <h2 className="mt-2 text-3xl font-extrabold text-foreground">دكتور توم.. ملتقى الطب والترفيه</h2>
-          <p className="mt-4 text-muted-foreground leading-8">
-            بدأت عيادة دكتور توم البيطرية المتقدمة رحلتها بشكل احترافي، يتميز بالتكامل والابتكار؛ لتكون رائدةً في مجال الرعاية الطبية للحيوانات الأليفة ومنفردةً فيما يتعلق بالرفاهية العالية للأليف وعميلنا العزيز.
-          </p>
-          <p className="mt-3 text-muted-foreground leading-8">
-            وفرنا في دكتور توم طاقم طبي احترافي يتناسب مع الأجهزة الطبية المتقدمة؛ لنقدم لأليفنا خدمة آمنة وعالية الجودة، واستكمالاً لقصتنا صنعنا لعميلنا وأليفه وسائل ترفيهية مميزة لنحقق الرفاهية المتكاملة.
-          </p>
-          <ul className="mt-6 space-y-3">
-            {points.map((t) => (
-              <li key={t} className="flex items-center gap-3 text-foreground/85">
-                <CheckCircle2 className="w-5 h-5 text-brand shrink-0" /> <span className="font-semibold">{t}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
-}
+const content = { ar: { tag:"قصتنا", title:"دكتور توم.. ملتقى الطب والترفيه", p1:"بدأت عيادة دكتور توم البيطرية المتقدمة رحلتها بشكل احترافي، يتميز بالتكامل والابتكار؛ لتكون رائدةً في مجال الرعاية الطبية للحيوانات الأليفة ومنفردةً فيما يتعلق بالرفاهية العالية للأليف وعميلنا العزيز.", p2:"وفرنا في دكتور توم طاقم طبي احترافي يتناسب مع الأجهزة الطبية المتقدمة؛ لنقدم لأليفنا خدمة آمنة وعالية الجودة، واستكمالاً لقصتنا صنعنا لعميلنا وأليفه وسائل ترفيهية مميزة لنحقق الرفاهية المتكاملة.", points:["طاقم طبي احترافي", "أجهزة طبية متقدمة", "رفاهية متكاملة"] }, en: { tag:"Our story", title:"Dr. Tom — where medicine meets enjoyment", p1:"Dr. Tom Advanced Veterinary Clinic began with a professional, integrated and innovative vision: to lead pet medical care while delivering exceptional wellbeing for every pet and owner.", p2:"We bring together a professional medical team and advanced equipment to provide safe, high-quality care, alongside distinctive recreation that creates a complete wellbeing experience.", points:["Professional medical team", "Advanced medical equipment", "Complete wellbeing"] } };
+export default function Story() { const { language } = useLanguage(); const c=content[language]; return <section id="story" className="py-20 bg-secondary/50"><div className="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-10 items-center"><Image src={img} fittingType="fill" focalPointX={0.5} focalPointY={0.4} className="rounded-3xl w-full h-[360px] shadow-xl" /><div><span className="text-primary font-bold">{c.tag}</span><h2 className="mt-2 text-3xl font-extrabold text-foreground">{c.title}</h2><p className="mt-4 text-muted-foreground leading-8">{c.p1}</p><p className="mt-3 text-muted-foreground leading-8">{c.p2}</p><ul className="mt-6 space-y-3">{c.points.map(t=><li key={t} className="flex items-center gap-3 text-foreground/85"><CheckCircle2 className="w-5 h-5 text-brand shrink-0" /><span className="font-semibold">{t}</span></li>)}</ul></div></div></section>; }
