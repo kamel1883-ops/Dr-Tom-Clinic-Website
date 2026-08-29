@@ -5,7 +5,7 @@ const FB_PAGE = "https://www.facebook.com/p/%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A
 const TT = "https://www.tiktok.com/@drtompetclinic";
 
 export default function SocialGallery() {
-  const fbSrc = `https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(FB_PAGE)}&tabs=timeline&width=500&height=640&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true`;
+  const fbSrc = `https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(FB_PAGE)}&tabs=timeline&width=500&height=640&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&colorscheme=dark`;
 
   return (
     <section id="social-gallery" className="py-20 bg-[#0b121c]">
