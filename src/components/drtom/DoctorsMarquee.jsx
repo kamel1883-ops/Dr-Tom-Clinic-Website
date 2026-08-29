@@ -1,7 +1,8 @@
 import DoctorCard from "@/components/drtom/DoctorCard";
 
 export default function DoctorsMarquee({ doctors, isArabic }) {
-  const repeatedDoctors = [...doctors, ...doctors, ...doctors, ...doctors];
+  const cycleDoctors = [...doctors, doctors[0]];
+  const repeatedDoctors = [...cycleDoctors, ...cycleDoctors];
 
   return (
     <div className="mt-12 overflow-hidden" aria-label={isArabic ? "أطباؤنا" : "Our doctors"}>
