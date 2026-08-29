@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative h-[82vh] min-h-[480px] w-full overflow-hidden">
       <img src={bg} alt="حيوانات أليفة في عيادة دكتور توم" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-l from-sky-900/85 via-sky-800/75 to-sky-700/55" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-primary/90 via-primary/75 to-brand/45" />
       <div className="relative z-10 mx-auto max-w-7xl h-full px-4 flex flex-col items-center justify-center text-center text-white">
         <span className="mb-5 inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold backdrop-blur">
           اختر الخدمة التي تحتاجها لأليفك
@@ -31,7 +31,7 @@ export default function Hero() {
         <h1 key={i} className="max-w-3xl text-3xl sm:text-5xl font-extrabold leading-tight drop-shadow-lg">
           {slides[i]}
         </h1>
-        <Button asChild size="lg" className="mt-8 gap-2 text-base h-12 px-8">
+        <Button asChild size="lg" className="mt-8 gap-2 text-base h-12 px-8 bg-white text-primary hover:bg-white/90">
           <a href="#booking"><CalendarCheck className="w-5 h-5" /> احجز موعد الآن</a>
         </Button>
       </div>

@@ -24,7 +24,7 @@ const rec = [
 function Card({ icon: Icon, t }) {
   return (
     <div className="group flex flex-col items-center gap-3 rounded-2xl border border-border bg-white p-5 text-center hover:border-primary hover:shadow-lg transition">
-      <div className="grid place-items-center w-14 h-14 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition">
+      <div className="grid place-items-center w-14 h-14 rounded-2xl bg-primary/10 text-primary group-hover:bg-brand group-hover:text-white transition">
         <Icon className="w-7 h-7" />
       </div>
       <span className="text-sm font-bold text-foreground leading-6">{t}</span>
@@ -50,7 +50,7 @@ export default function Services() {
           {rec.map((s) => <Card key={s.t} {...s} />)}
         </div>
         <div className="mt-10 text-center">
-          <span className="inline-block rounded-full bg-primary/10 text-primary font-bold px-5 py-2.5 text-sm">
+          <span className="inline-block rounded-full bg-brand/10 text-brand font-bold px-5 py-2.5 text-sm">
             نعمل على مدار 24 ساعة يومياً • عدا الجمعة من 4 صباحاً حتى 4 عصراً للطوارئ فقط
           </span>
         </div>

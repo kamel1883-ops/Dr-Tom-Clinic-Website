@@ -62,7 +62,7 @@ export default function Booking() {
               </select>
             </div>
             <div className="sm:col-span-2">
-              <Button type="submit" size="lg" variant="secondary" className="w-full gap-2 bg-white text-primary hover:bg-white/90">
+              <Button type="submit" size="lg" className="w-full gap-2 bg-brand text-white hover:bg-brand/90">
                 <Send className="w-4 h-4" /> تواصل معنا
               </Button>
             </div>

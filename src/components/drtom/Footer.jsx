@@ -1,4 +1,7 @@
-import { Phone, MessageCircle, Mail, MapPin, PawPrint } from "lucide-react";
+import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
+import { Image } from "@/components/ui/image";
+
+const LOGO = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/e44611d94_Screenshot2026-08-05143830.png";
 
 const articles = [
   "كيف تساهم تربية حيوانات أليفة في تعديل سلوك الطفل",
@@ -21,15 +24,7 @@ export default function Footer() {
     <footer className="bg-foreground text-white/80">
       <div className="mx-auto max-w-7xl px-4 py-14 grid md:grid-cols-4 gap-8">
         <div>
-          <div className="flex items-center gap-2">
-            <div className="grid place-items-center w-10 h-10 rounded-full bg-primary text-primary-foreground">
-              <PawPrint className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="font-extrabold text-white text-lg">دكتور توم</div>
-              <div className="text-[11px] text-white/60">أكثر من مجرد عيادة</div>
-            </div>
-          </div>
+          <Image src={LOGO} fittingType="fit" className="h-16 w-36 mb-2" />
           <p className="mt-4 text-sm leading-7">
             دكتور توم ملتقى الطب والترفيه — رعاية طبية ورفاهية متكاملة لأليفك على مدار الساعة.
           </p>

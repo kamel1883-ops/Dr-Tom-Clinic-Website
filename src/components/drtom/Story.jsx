@@ -21,7 +21,7 @@ export default function Story() {
           <ul className="mt-6 space-y-3">
             {points.map((t) => (
               <li key={t} className="flex items-center gap-3 text-foreground/85">
-                <CheckCircle2 className="w-5 h-5 text-primary shrink-0" /> <span className="font-semibold">{t}</span>
+                <CheckCircle2 className="w-5 h-5 text-brand shrink-0" /> <span className="font-semibold">{t}</span>
               </li>
             ))}
           </ul>

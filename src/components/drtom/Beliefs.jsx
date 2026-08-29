@@ -8,7 +8,7 @@ const items = [
 
 export default function Beliefs() {
   return (
-    <section className="py-20 bg-primary text-white">
+    <section className="py-20 bg-brand text-white">
       <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-3 gap-8">
         {items.map(({ icon: Icon, t, d }) => (
           <div key={t} className="text-center">
