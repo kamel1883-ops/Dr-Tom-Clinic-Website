@@ -12,8 +12,8 @@ const slides = [
   "استمتع بالحديقة والممشى على مدار 24 ساعة",
 ];
 
-const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/5340d7831_generated_image.png";
-const wallLogo = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/3e865136f_Screenshot2026-07-26144441.png";
+const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/4ca9dc864_generated_image.png";
+const wallLogo = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/cb0c3af7c_Screenshot2026-07-26144441.png";
 
 export default function Hero() {
   const [i, setI] = useState(0);
@@ -35,13 +35,14 @@ export default function Hero() {
         src={wallLogo}
         fittingType="fit"
         alt="شعار عيادات دكتور توم البيطرية المتقدمة"
-        className="absolute z-[1] top-[6%] right-[8%] w-[16%] h-[26%] mix-blend-multiply"
+        className="absolute z-[1] top-[5%] left-1/2 -translate-x-1/2 w-[26%] h-[30%] grayscale brightness-[1.25] contrast-[0.78] opacity-[0.5] mix-blend-multiply"
         style={{
-          opacity: 0.55,
           filter:
-            "drop-shadow(0 -2px 1.5px rgba(0,0,0,0.6)) drop-shadow(0 2px 1.5px rgba(255,250,245,0.85)) drop-shadow(1px -1px 0.5px rgba(0,0,0,0.28)) drop-shadow(-1px 1px 0.5px rgba(255,250,245,0.4)) saturate(0.62) contrast(0.86) brightness(1.18)",
+            "blur(0.35px) drop-shadow(inset 0 0 1px rgba(80,70,60,0.5)) drop-shadow(0 3px 4px rgba(40,35,30,0.22))",
         }}
       />
+      {/* Engraved inlay lines to mimic wall-naqed carving */}
+      <div className="absolute z-[2] top-[5%] left-1/2 -translate-x-1/2 w-[26%] h-[30%] rounded-xl bg-primary/10 ring-1 ring-foreground/25 [box-shadow:inset_0_2px_3px_rgba(255,248,240,0.7),inset_0_-2px_3px_rgba(40,35,30,0.28)] pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-transparent to-black/30" />
       <div className="absolute z-10 left-4 sm:left-8 top-1/2 -translate-y-1/2 max-w-md text-white">
         <div className="rounded-3xl bg-primary/35 backdrop-blur-md border border-white/20 p-6 sm:p-7 text-right">
