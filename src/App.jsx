@@ -10,6 +10,8 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from '@/pages/Home';
 import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import RefundPolicy from '@/pages/RefundPolicy';
+import Blog from '@/pages/Blog';
+import BlogPost from '@/pages/BlogPost';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -39,6 +41,8 @@ const AuthenticatedApp = () => {
     <Routes>
       {/* Add your page Route elements here */}
       <Route path="/" element={<Home />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/refund-policy" element={<RefundPolicy />} />
       <Route path="*" element={<PageNotFound />} />
