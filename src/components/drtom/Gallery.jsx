@@ -1,7 +1,7 @@
 import { Image } from "@/components/ui/image";
 
 const items = [
-  { src: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/6fad66c26_generated_image.png", t: "متجر المستلزمات", d: "كل ما يحتاجه أليفك في مكان واحد" },
+  { src: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/2026b2c28_generated_image.png", t: "متجر المستلزمات", d: "كل ما يحتاجه أليفك في مكان واحد" },
   { src: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/57978afca_image.png", t: "الحديقة والممشى", d: "مساحة ترفيهية آمنة على مدار الساعة" },
   { src: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/b02d2b52d_generated_image.png", t: "القرومنق الطبي", d: "شاور وحلاقة احترافية لأليفك" },
 ];
