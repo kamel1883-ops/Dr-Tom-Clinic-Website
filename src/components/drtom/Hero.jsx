@@ -43,15 +43,15 @@ export default function Hero() {
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-transparent to-black/30" />
-      <div className="relative z-10 mx-auto max-w-7xl h-full px-6 flex flex-col items-start justify-start pt-16 sm:pt-20 text-right text-white">
-        <div className="max-w-xl rounded-3xl bg-primary/30 backdrop-blur-md border border-white/20 p-6 sm:p-8 text-right">
+      <div className="absolute z-10 left-4 sm:left-8 top-1/2 -translate-y-1/2 max-w-md text-white">
+        <div className="rounded-3xl bg-primary/35 backdrop-blur-md border border-white/20 p-6 sm:p-7 text-right">
           <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold backdrop-blur">
             اختر الخدمة التي تحتاجها لأليفك
           </span>
-          <h1 key={i} className="text-3xl sm:text-5xl font-extrabold leading-tight drop-shadow-lg text-right">
+          <h1 key={i} className="text-2xl sm:text-4xl font-extrabold leading-tight drop-shadow-lg text-right">
             {slides[i]}
           </h1>
-          <Button asChild size="lg" className="mt-7 gap-2 text-base h-12 px-8 bg-white text-primary hover:bg-white/90">
+          <Button asChild size="lg" className="mt-6 gap-2 text-base h-12 px-8 bg-white text-primary hover:bg-white/90">
             <a href="#booking"><CalendarCheck className="w-5 h-5" /> احجز موعد الآن</a>
           </Button>
         </div>
