@@ -78,7 +78,7 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
               src="https://www.google.com/maps?q=24.7639613,46.6242536&z=16&output=embed"
             />
-            <a href="https://www.google.com/maps/place/dr.+tom+pet+clinic/@24.7639613,46.6242536,17z" target="_blank" rel="noopener noreferrer" className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-primary text-white px-4 py-2 text-sm font-bold shadow-lg hover:bg-primary/90 transition">
+            <a href="https://www.google.com/maps/place/dr.+tom+pet+clinic/@24.7639613,46.6242536,17z" target="_blank" rel="noopener noreferrer" className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-[#4ade80] text-[#0b121c] px-4 py-2 text-sm font-bold shadow-lg hover:bg-[#5ef08f] transition">
               <MapPin className="w-4 h-4" /> احصل على الاتجاهات
             </a>
           </div>
