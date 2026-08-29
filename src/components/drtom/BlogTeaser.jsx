@@ -1,7 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { Image } from "@/components/ui/image";
 
-const img = "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80";
+const img = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/737dce985_generated_image.png";
 
 export default function BlogTeaser() {
   return (

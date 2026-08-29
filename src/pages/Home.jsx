@@ -4,6 +4,7 @@ import Story from "@/components/drtom/Story";
 import Services from "@/components/drtom/Services";
 import Beliefs from "@/components/drtom/Beliefs";
 import Features from "@/components/drtom/Features";
+import Gallery from "@/components/drtom/Gallery";
 import BlogTeaser from "@/components/drtom/BlogTeaser";
 import Testimonials from "@/components/drtom/Testimonials";
 import Booking from "@/components/drtom/Booking";
@@ -20,6 +21,7 @@ export default function Home() {
         <Services />
         <Beliefs />
         <Features />
+        <Gallery />
         <BlogTeaser />
         <Testimonials />
         <Booking />

@@ -1,7 +1,10 @@
-import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
+import { Phone, MessageCircle, Mail, MapPin, Facebook } from "lucide-react";
 import { Image } from "@/components/ui/image";
+import TikTokIcon from "@/components/drtom/TikTokIcon";
 
 const LOGO = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/e44611d94_Screenshot2026-08-05143830.png";
+const FB = "https://www.facebook.com/p/%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9-%D8%AF-%D8%AA%D9%88%D9%85-%D8%A7%D9%84%D8%A8%D9%8A%D8%B7%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D9%82%D8%AF%D9%85%D8%A9-Dr-TOM-Pet-Clinic-100091919482521/";
+const TT = "https://www.tiktok.com/@drtompetclinic";
 
 const articles = [
   "كيف تساهم تربية حيوانات أليفة في تعديل سلوك الطفل",
@@ -48,11 +51,15 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-white mb-3">تواصل معنا</h3>
           <ul className="space-y-3 text-sm">
-            <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-primary mt-1 shrink-0" /> الرياض، حي العقيق، مبنى 7083</li>
+            <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-primary mt-1 shrink-0" /> الرياض، المملكة العربية السعودية</li>
             <li><a href="tel:+966533399462" className="flex items-center gap-2 hover:text-primary"><Phone className="w-4 h-4 text-primary" /> +966 53 339 9462</a></li>
             <li><a href="https://wa.me/966533399462" className="flex items-center gap-2 hover:text-primary"><MessageCircle className="w-4 h-4 text-primary" /> واتساب</a></li>
             <li><a href="mailto:info@drtom-clinic.com" className="flex items-center gap-2 hover:text-primary"><Mail className="w-4 h-4 text-primary" /> info@drtom-clinic.com</a></li>
           </ul>
+          <div className="flex items-center gap-3 mt-4">
+            <a href={FB} target="_blank" rel="noopener noreferrer" className="grid place-items-center w-9 h-9 rounded-full bg-white/10 hover:bg-primary hover:text-white transition" aria-label="فيسبوك"><Facebook className="w-4 h-4" /></a>
+            <a href={TT} target="_blank" rel="noopener noreferrer" className="grid place-items-center w-9 h-9 rounded-full bg-white/10 hover:bg-primary hover:text-white transition" aria-label="تيك توك"><TikTokIcon className="w-4 h-4" /></a>
+          </div>
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-white/50">
