@@ -12,7 +12,7 @@ const slides = [
   "استمتع بالحديقة والممشى على مدار 24 ساعة",
 ];
 
-const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/1d61aa4f3_generated_image.png";
+const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/5340d7831_generated_image.png";
 const wallLogo = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/3e865136f_Screenshot2026-07-26144441.png";
 
 export default function Hero() {
@@ -35,24 +35,26 @@ export default function Hero() {
         src={wallLogo}
         fittingType="fit"
         alt="شعار عيادات دكتور توم البيطرية المتقدمة"
-        className="absolute z-[1] top-[10%] right-[14%] w-[20%] h-[30%] mix-blend-multiply"
+        className="absolute z-[1] top-[6%] right-[8%] w-[16%] h-[26%] mix-blend-multiply"
         style={{
           opacity: 0.55,
           filter:
             "drop-shadow(0 -2px 1.5px rgba(0,0,0,0.6)) drop-shadow(0 2px 1.5px rgba(255,250,245,0.85)) drop-shadow(1px -1px 0.5px rgba(0,0,0,0.28)) drop-shadow(-1px 1px 0.5px rgba(255,250,245,0.4)) saturate(0.62) contrast(0.86) brightness(1.18)",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-black/10" />
-      <div className="relative z-10 mx-auto max-w-7xl h-full px-4 flex flex-col items-center justify-center text-center text-white">
-        <span className="mb-5 inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold backdrop-blur">
-          اختر الخدمة التي تحتاجها لأليفك
-        </span>
-        <h1 key={i} className="max-w-3xl text-3xl sm:text-5xl font-extrabold leading-tight drop-shadow-lg">
-          {slides[i]}
-        </h1>
-        <Button asChild size="lg" className="mt-8 gap-2 text-base h-12 px-8 bg-white text-primary hover:bg-white/90">
-          <a href="#booking"><CalendarCheck className="w-5 h-5" /> احجز موعد الآن</a>
-        </Button>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-transparent to-black/30" />
+      <div className="relative z-10 mx-auto max-w-7xl h-full px-6 flex flex-col items-start justify-start pt-16 sm:pt-20 text-right text-white">
+        <div className="max-w-xl rounded-3xl bg-primary/30 backdrop-blur-md border border-white/20 p-6 sm:p-8 text-right">
+          <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold backdrop-blur">
+            اختر الخدمة التي تحتاجها لأليفك
+          </span>
+          <h1 key={i} className="text-3xl sm:text-5xl font-extrabold leading-tight drop-shadow-lg text-right">
+            {slides[i]}
+          </h1>
+          <Button asChild size="lg" className="mt-7 gap-2 text-base h-12 px-8 bg-white text-primary hover:bg-white/90">
+            <a href="#booking"><CalendarCheck className="w-5 h-5" /> احجز موعد الآن</a>
+          </Button>
+        </div>
       </div>
       <button onClick={() => go(-1)} className="absolute right-4 top-1/2 -translate-y-1/2 z-10 grid place-items-center w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 text-white transition" aria-label="السابق">
         <ChevronRight className="w-5 h-5" />
