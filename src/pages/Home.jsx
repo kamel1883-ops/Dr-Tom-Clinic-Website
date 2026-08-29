@@ -1,6 +1,7 @@
 import Navbar from "@/components/drtom/Navbar";
 import Hero from "@/components/drtom/Hero";
 import Story from "@/components/drtom/Story";
+import Vmg from "@/components/drtom/Vmg";
 import Services from "@/components/drtom/Services";
 import Team from "@/components/drtom/Team";
 import Beliefs from "@/components/drtom/Beliefs";
@@ -19,6 +20,7 @@ export default function Home() {
       <main>
         <Hero />
         <Story />
+        <Vmg />
         <Services />
         <Team />
         <Beliefs />

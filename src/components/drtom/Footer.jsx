@@ -1,5 +1,6 @@
 import { Phone, MessageCircle, Mail, MapPin, Facebook } from "lucide-react";
 import { Image } from "@/components/ui/image";
+import { Link } from "react-router-dom";
 import TikTokIcon from "@/components/drtom/TikTokIcon";
 
 const LOGO = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/e44611d94_Screenshot2026-08-05143830.png";
@@ -62,8 +63,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 py-5 text-center text-xs text-white/50">
-        Copyright © 2023 Dr Tom Clinic — Powered by Tom
+      <div className="border-t border-white/10 py-5">
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/60">
+          <Link to="/privacy-policy" className="hover:text-primary transition">سياسة الخصوصية</Link>
+          <Link to="/refund-policy" className="hover:text-primary transition">سياسة الاسترداد</Link>
+          <span className="text-white/30">•</span>
+          <span>Copyright © 2026 Dr Tom Clinic — Powered by Tom</span>
+        </div>
       </div>
     </footer>
   );
