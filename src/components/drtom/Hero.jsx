@@ -12,7 +12,7 @@ const slides = [
   "استمتع بالحديقة والممشى على مدار 24 ساعة",
 ];
 
-const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/358ba59fe_generated_image.png";
+const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/1d61aa4f3_generated_image.png";
 const wallLogo = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/3e865136f_Screenshot2026-07-26144441.png";
 
 export default function Hero() {
