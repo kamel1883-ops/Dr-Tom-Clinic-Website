@@ -12,7 +12,7 @@ const slides = [
   "استمتع بالحديقة والممشى على مدار 24 ساعة",
 ];
 
-const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/1f716b430_generated_image.png";
+const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/358ba59fe_generated_image.png";
 const wallLogo = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/3e865136f_Screenshot2026-07-26144441.png";
 
 export default function Hero() {
@@ -29,17 +29,17 @@ export default function Hero() {
         fittingType="fill"
         alt="حيوانات أليفة في عيادة دكتور توم"
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ filter: "saturate(1.12) contrast(1.06) brightness(1.03)" }}
+        style={{ filter: "saturate(1.06) contrast(1.04) brightness(1.02)" }}
       />
       <Image
         src={wallLogo}
         fittingType="fit"
         alt="شعار عيادات دكتور توم البيطرية المتقدمة"
-        className="absolute z-[1] top-[1%] right-[31%] w-[18%] h-[30%] mix-blend-multiply"
+        className="absolute z-[1] top-[10%] right-[14%] w-[20%] h-[30%] mix-blend-multiply"
         style={{
-          opacity: 0.92,
+          opacity: 0.55,
           filter:
-            "drop-shadow(1px 1px 0 rgba(255,255,255,0.55)) drop-shadow(-1px -1px 0 rgba(255,255,255,0.5)) drop-shadow(4px 5px 6px rgba(0,0,0,0.55)) drop-shadow(2px 3px 2px rgba(0,0,0,0.35)) saturate(0.8) contrast(0.92) brightness(1.08)",
+            "drop-shadow(0 -2px 1.5px rgba(0,0,0,0.6)) drop-shadow(0 2px 1.5px rgba(255,250,245,0.85)) drop-shadow(1px -1px 0.5px rgba(0,0,0,0.28)) drop-shadow(-1px 1px 0.5px rgba(255,250,245,0.4)) saturate(0.62) contrast(0.86) brightness(1.18)",
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-black/10" />
