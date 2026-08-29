@@ -1,12 +1,12 @@
-const teamImg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/bfeb9def0_Screenshot2026-08-29134546.png";
+const teamImg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/9fbdc5bea_Screenshot2026-08-29134546.png";
 
-// 5 أطباء في صف واحد، كل طبيب يشغل ~20% من عرض الصورة
+// 5 أطباء في صف واحد — كل طبيب يشغل ~20% من عرض الصورة
 const docs = [
-  { pos: "0% 25%", n: "د. عبد الرحمن يسري" },
-  { pos: "25% 25%", n: "د. محمد عنتر" },
-  { pos: "50% 25%", n: "د. مروى مسعد" },
-  { pos: "75% 25%", n: "د. ماير ميشيل" },
-  { pos: "100% 25%", n: "د. عمر سنبل" },
+  { pos: "0% 62%", n: "د. عبد الرحمن يسري" },
+  { pos: "25% 62%", n: "د. محمد عنتر" },
+  { pos: "50% 62%", n: "د. مروى مسعد" },
+  { pos: "75% 62%", n: "د. ماير ميشيل" },
+  { pos: "100% 62%", n: "د. عمر سنبل" },
 ];
 
 export default function Team() {
@@ -21,23 +21,22 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
           {docs.map((d) => (
-            <div key={d.n} className="flex flex-col items-center text-center">
-              {/* إطار دائري أخضر/أزرق */}
-              <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full p-[5px] shadow-sm"
-                   style={{ background: "conic-gradient(from 200deg, hsl(82 54% 47%) 0deg 180deg, hsl(211 64% 40%) 180deg 360deg)" }}>
-                <div className="relative w-full h-full rounded-full overflow-hidden bg-white"
-                     style={{
-                       backgroundImage: `url(${teamImg})`,
-                       backgroundSize: "500% 220%",
-                       backgroundPosition: d.pos,
-                     }}
-                     aria-label={d.n}
-                />
+            <div key={d.n} className="w-full max-w-[220px] rounded-2xl overflow-hidden bg-white shadow-md ring-1 ring-border">
+              <div className="w-full aspect-[3/4] bg-white"
+                   style={{
+                     backgroundImage: `url(${teamImg})`,
+                     backgroundSize: "500% 190%",
+                     backgroundPosition: d.pos,
+                     backgroundRepeat: "no-repeat",
+                   }}
+                   aria-label={d.n}
+              />
+              <div className="bg-primary px-4 py-3 text-center">
+                <h3 className="text-white text-base font-extrabold">{d.n}</h3>
+                <span className="block mt-0.5 text-xs font-semibold text-white/70">طبيب بيطري</span>
               </div>
-              <h3 className="mt-4 text-base font-extrabold text-foreground">{d.n}</h3>
-              <span className="mt-1 text-xs font-semibold text-brand">طبيب بيطري</span>
             </div>
           ))}
         </div>
