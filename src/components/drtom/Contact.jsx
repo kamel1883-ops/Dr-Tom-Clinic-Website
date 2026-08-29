@@ -22,32 +22,32 @@ export default function Contact() {
     <section id="contact" className="py-20">
       <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-8 items-stretch">
         {/* معلومات التواصل */}
-        <div className="rounded-3xl bg-[#0b121c] p-7 sm:p-9 text-white">
-          <h3 className="text-xl font-extrabold">معلومات التواصل</h3>
+        <div className="rounded-3xl bg-card border border-border shadow-sm p-7 sm:p-9">
+          <h3 className="text-xl font-extrabold text-foreground">معلومات التواصل</h3>
           <div className="mt-6 space-y-4">
             {info.map(({ icon: Icon, t, d, href }) => (
-              <a key={t} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="flex items-center gap-4 rounded-2xl bg-[#1e293b]/80 p-4 hover:bg-[#243449] transition">
-                <div className="grid place-items-center w-11 h-11 rounded-xl bg-[#1e293b] text-[#4ade80] shrink-0">
+              <a key={t} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="flex items-center gap-4 rounded-2xl bg-secondary/60 border border-border p-4 hover:bg-secondary transition">
+                <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary text-primary-foreground shrink-0">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="flex-1 text-center">
-                  <div className="text-sm text-white/55 font-semibold">{t}</div>
-                  <div className="text-base font-bold mt-0.5" dir="ltr">{d}</div>
+                  <div className="text-sm text-muted-foreground font-semibold">{t}</div>
+                  <div className="text-base font-bold mt-0.5 text-foreground" dir="ltr">{d}</div>
                 </div>
               </a>
             ))}
-            <div className="rounded-2xl bg-[#1e293b]/80 p-4">
+            <div className="rounded-2xl bg-secondary/60 border border-border p-4">
               <div className="flex items-center gap-4">
-                <div className="grid place-items-center w-11 h-11 rounded-xl bg-[#1e293b] text-[#4ade80] shrink-0">
+                <div className="grid place-items-center w-11 h-11 rounded-xl bg-brand text-brand-foreground shrink-0">
                   <Share2 className="w-5 h-5" />
                 </div>
                 <div className="flex-1 text-center">
-                  <div className="text-sm text-white/55 font-semibold">تابعنا</div>
+                  <div className="text-sm text-muted-foreground font-semibold">تابعنا</div>
                 </div>
               </div>
               <div className="mt-3 flex items-center justify-center gap-3">
-                <a href={FB} target="_blank" rel="noopener noreferrer" className="grid place-items-center w-10 h-10 rounded-xl bg-[#0b121c] text-[#4ade80] hover:bg-[#4ade80] hover:text-[#0b121c] transition" aria-label="فيسبوك"><Facebook className="w-5 h-5" /></a>
-                <a href={TT} target="_blank" rel="noopener noreferrer" className="grid place-items-center w-10 h-10 rounded-xl bg-[#0b121c] text-[#4ade80] hover:bg-[#4ade80] hover:text-[#0b121c] transition" aria-label="تيك توك"><TikTokIcon className="w-5 h-5" /></a>
+                <a href={FB} target="_blank" rel="noopener noreferrer" className="grid place-items-center w-10 h-10 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition" aria-label="فيسبوك"><Facebook className="w-5 h-5" /></a>
+                <a href={TT} target="_blank" rel="noopener noreferrer" className="grid place-items-center w-10 h-10 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition" aria-label="تيك توك"><TikTokIcon className="w-5 h-5" /></a>
               </div>
             </div>
           </div>
@@ -55,15 +55,15 @@ export default function Contact() {
 
         {/* مواعيد العمل + الخريطة */}
         <div className="flex flex-col gap-8">
-          <div className="rounded-3xl bg-[#0b121c] p-7 sm:p-9 text-white">
-            <h3 className="flex items-center gap-2 text-xl font-extrabold">
-              <Clock className="w-5 h-5 text-[#4ade80]" /> مواعيد العمل
+          <div className="rounded-3xl bg-card border border-border shadow-sm p-7 sm:p-9">
+            <h3 className="flex items-center gap-2 text-xl font-extrabold text-foreground">
+              <Clock className="w-5 h-5 text-brand" /> مواعيد العمل
             </h3>
             <div className="mt-6 space-y-3">
               {hours.map((r) => (
-                <div key={r.day} className="flex items-center justify-between gap-4 rounded-2xl bg-[#1e293b]/80 p-4">
-                  <span className={`text-base font-bold ${r.closed ? "text-[#4ade80]" : "text-white"}`}>{r.time}</span>
-                  <span className="text-sm text-white/55 font-semibold text-left">{r.day}</span>
+                <div key={r.day} className="flex items-center justify-between gap-4 rounded-2xl bg-secondary/60 border border-border p-4">
+                  <span className={`text-base font-bold ${r.closed ? "text-brand" : "text-primary"}`}>{r.time}</span>
+                  <span className="text-sm text-muted-foreground font-semibold text-left">{r.day}</span>
                 </div>
               ))}
             </div>
@@ -78,7 +78,7 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
               src="https://www.google.com/maps?q=24.7639613,46.6242536&z=16&output=embed"
             />
-            <a href="https://www.google.com/maps/place/dr.+tom+pet+clinic/@24.7639613,46.6242536,17z" target="_blank" rel="noopener noreferrer" className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-[#4ade80] text-[#0b121c] px-4 py-2 text-sm font-bold shadow-lg hover:bg-[#5ef08f] transition">
+            <a href="https://www.google.com/maps/place/dr.+tom+pet+clinic/@24.7639613,46.6242536,17z" target="_blank" rel="noopener noreferrer" className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-bold shadow-lg hover:bg-primary/90 transition">
               <MapPin className="w-4 h-4" /> احصل على الاتجاهات
             </a>
           </div>
