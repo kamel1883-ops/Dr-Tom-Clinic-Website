@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes doctor-marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
 @layer base {
   :root {
     --background: 210 40% 99%;

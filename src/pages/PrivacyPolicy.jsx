@@ -1,4 +1,77 @@
-import Navbar from "@/components/drtom/Navbar"; import Footer from "@/components/drtom/Footer"; import { ShieldCheck } from "lucide-react"; import { useLanguage } from "@/lib/LanguageContext";
-const ar=[["مقدمة","تلتزم عيادة دكتور توم البيطرية المتقدمة بحماية خصوصية عملائها وزوار موقعها الإلكتروني. توضّح هذه السياسة كيفية جمعنا واستخدامنا وحمايتنا للبيانات الشخصية عند استخدامك لخدماتنا أو موقعنا."],["البيانات التي نجمعها","قد نجمع بيانات مثل الاسم، رقم الهاتف، البريد الإلكتروني، عنوانك، وبيانات الحيوان الأليف عند حجز موعد أو التواصل معنا أو الاشتراك في خدماتنا."],["كيفية استخدامنا للبيانات","نستخدم بياناتك لتأكيد وحجز المواعيد، تقديم الخدمات الطبية والاستشارية، التواصل بشأن العروض والخدمات، وتحسين تجربتك. لا نبيع بياناتك لأي طرف ثالث."],["مشاركة البيانات","قد نشارك بياناتك مع مزوّدي خدمات ضروريين لتقديم خدمتنا، مثل خدمات الرسائل أو الدفع، ضمن حدود الالتزام القانوني فقط."],["حماية البيانات","نتخذ تدابير أمنية فنية وتنظيمية مناسبة لحماية بياناتك من الوصول غير المصرّح به أو الفقدان أو التعديل."],["حقوقك","لك الحق في الوصول إلى بياناتك وتصحيحها أو طلب حذفها أو إيقاف معالجتها في أي وقت عبر التواصل معنا."],["ملفات تعريف الارتباط","يستخدم موقعنا ملفات تعريف الارتباط لتحسين تجربة التصفح وتحليل الأداء. يمكنك ضبط متصفحك للتحكم فيها."],["التعديلات على السياسة","قد نحدّث هذه السياسة من حين لآخر لتعكس التغييرات في خدماتنا أو المتطلبات النظامية."],["التواصل","لأي استفسار يتعلق بسياسة الخصوصية، تواصل معنا عبر الهاتف +966533399462 أو البريد الإلكتروني privacy@drtom-clinic.com."]];
-const en=[["Introduction","Dr. Tom Advanced Veterinary Clinic is committed to protecting the privacy of our clients and website visitors. This policy explains how we collect, use and protect personal information when you use our services or website."],["Information we collect","We may collect your name, phone number, email address, address and pet details when you book an appointment, contact us or use our services."],["How we use information","We use your information to confirm appointments, provide medical and advisory services, communicate about services and improve your experience. We do not sell your information to third parties."],["Sharing information","We may share information with essential service providers, such as messaging or payment providers, only to the extent legally required to deliver our services."],["Data protection","We use appropriate technical and organisational measures to protect your information from unauthorised access, loss or alteration."],["Your rights","You may access, correct, request deletion of or restrict processing of your information at any time by contacting us."],["Cookies","Our website uses cookies to improve browsing and analyse performance. You can adjust your browser settings to manage them."],["Policy updates","We may update this policy from time to time to reflect changes in our services or legal requirements."],["Contact","For privacy enquiries, call +966533399462 or email privacy@drtom-clinic.com."]];
-export default function PrivacyPolicy(){const {isArabic}=useLanguage();const list=isArabic?ar:en;return <div className="min-h-screen bg-background"><Navbar/><section className="py-16"><div className="mx-auto max-w-3xl px-4"><div className="text-center"><div className="mx-auto grid place-items-center w-16 h-16 rounded-2xl bg-secondary text-primary"><ShieldCheck className="w-8 h-8"/></div><h1 className="mt-4 text-3xl sm:text-4xl font-extrabold">{isArabic?"سياسة الخصوصية":"Privacy policy"}</h1><p className="mt-2 text-sm text-muted-foreground">{isArabic?"آخر تحديث: أغسطس 2026":"Last updated: August 2026"}</p></div><div className="mt-10 space-y-6">{list.map(([h,p])=><div key={h} className="rounded-2xl bg-white ring-1 ring-border shadow-sm p-6"><h2 className="text-lg font-extrabold text-primary">{h}</h2><p className="mt-2 text-muted-foreground leading-8 text-sm">{p}</p></div>)}</div><div className="mt-10 text-center"><a href="/" className="inline-flex rounded-full bg-primary text-white px-6 py-3 font-bold">{isArabic?"العودة للرئيسية":"Back to home"}</a></div></div></section><Footer/></div>}
+import Navbar from "@/components/drtom/Navbar";
+import Footer from "@/components/drtom/Footer";
+import { ShieldCheck } from "lucide-react";
+
+const sections = [
+  {
+    h: "مقدمة",
+    p: "تلتزم عيادة دكتور توم البيطرية المتقدمة بحماية خصوصية عملائها وزوار موقعها الإلكتروني. توضّح هذه السياسة كيفية جمعنا واستخدامنا وحمايتنا للبيانات الشخصية عند استخدامك لخدماتنا أو موقعنا.",
+  },
+  {
+    h: "البيانات التي نجمعها",
+    p: "قد نجمع بيانات مثل الاسم، رقم الهاتف، البريد الإلكتروني، عنوانك، وبيانات الحيوان الأليف (النوع، العمر، الحالة الصحية) عند حجز موعد أو التواصل معنا أو الاشتراك في خدماتنا.",
+  },
+  {
+    h: "كيفية استخدامنا للبيانات",
+    p: "نستخدم بياناتك لتأكيد وحجز المواعيد، تقديم الخدمات الطبية والاستشارية، التواصل بشأن العروض والخدمات، وتحسين تجربتك. لا نبيع بياناتك لأي طرف ثالث.",
+  },
+  {
+    h: "مشاركة البيانات",
+    p: "قد نشارك بياناتك مع مزوّدي serviços ضروريين لتقديم خدمتنا (مثل خدمات الرسائل أو الدفع) ضمن حدود الالتزام القانوني، ولا نمنحهم إذناً لاستخدامها لأغراض أخرى.",
+  },
+  {
+    h: "حماية البيانات",
+    p: "نتخذ تدابير أمنية فنية وتنظيمية مناسبة لحماية بياناتك من الوصول غير المصرّح به أو الفقدان أو التعديل، ونحدّد صلاحية الوصول لفريقنا المصرّح له فقط.",
+  },
+  {
+    h: "حقوقك",
+    p: "لك الحق في الوصول إلى بياناتك وتصحيحها أو طلب حذفها أو إيقاف معالجتها في أي وقت عبر التواصل معنا. يسري حذف البيانات ضمن القيود النظامية والقانونية.",
+  },
+  {
+    h: "ملفات تعريف الارتباط (Cookies)",
+    p: "يستخدم موقعنا ملفات تعريف الارتباط لتحسين تجربة التصفح وتحليل الأداء. يمكنك ضبط متصفحك للتحكم في هذه الملفات دون التأثير على الوصول للمحتوى الأساسي.",
+  },
+  {
+    h: "التعديلات على السياسة",
+    p: "قد نحدّث هذه السياسة من حين لآخر لتعكس التغييرات في خدماتنا أو متطلبات النظام. سيتم نشر أي تعديلات على هذه الصفحة مع تحديث تاريخ آخر مراجعة.",
+  },
+  {
+    h: "التواصل",
+    p: "لأي استفسار يتعلق بسياسة الخصوصية، تواصل معنا عبر الهاتف +966533399462 أو البريد الإلكتروني privacy@drtom-clinic.com.",
+  },
+];
+
+export default function PrivacyPolicy() {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <section className="py-16">
+        <div className="mx-auto max-w-3xl px-4">
+          <div className="text-center">
+            <div className="mx-auto grid place-items-center w-16 h-16 rounded-2xl bg-secondary text-primary">
+              <ShieldCheck className="w-8 h-8" />
+            </div>
+            <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold text-foreground">سياسة الخصوصية</h1>
+            <p className="mt-2 text-sm text-muted-foreground">آخر تحديث: أغسطس 2026</p>
+          </div>
+
+          <div className="mt-10 space-y-6">
+            {sections.map((s) => (
+              <div key={s.h} className="rounded-2xl bg-white ring-1 ring-border shadow-sm p-6">
+                <h2 className="text-lg font-extrabold text-primary">{s.h}</h2>
+                <p className="mt-2 text-muted-foreground leading-8 text-sm">{s.p}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <a href="/" className="inline-flex items-center gap-2 rounded-full bg-primary text-white px-6 py-3 font-bold hover:bg-primary/90 transition">
+              العودة للرئيسية
+            </a>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  );
+}

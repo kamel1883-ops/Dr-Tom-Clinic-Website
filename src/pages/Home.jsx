@@ -7,7 +7,6 @@ import Team from "@/components/drtom/Team";
 import Beliefs from "@/components/drtom/Beliefs";
 import Features from "@/components/drtom/Features";
 import Gallery from "@/components/drtom/Gallery";
-import ClinicVideos from "@/components/drtom/ClinicVideos";
 import SocialGallery from "@/components/drtom/SocialGallery";
 import BlogTeaser from "@/components/drtom/BlogTeaser";
 import Testimonials from "@/components/drtom/Testimonials";
@@ -28,7 +27,6 @@ export default function Home() {
         <Beliefs />
         <Features />
         <Gallery />
-        <ClinicVideos />
         <SocialGallery />
         <BlogTeaser />
         <Testimonials />

@@ -1,4 +1,89 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Share2 } from "lucide-react";
-import TikTokIcon from "@/components/drtom/TikTokIcon"; import { WhatsAppIcon } from "@/components/drtom/icons"; import { useLanguage } from "@/lib/LanguageContext";
-const FB="https://www.facebook.com/p/%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9-%D8%AF-%D8%AA%D9%88%D9%85-%D8%A7%D9%84%D8%A8%D9%8A%D8%B7%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D9%82%D8%AF%D9%85%D8%A9-Dr-TOM-Pet-Clinic-100091919482521/";const TT="https://www.tiktok.com/@drtompetclinic";const map="https://www.google.com/maps/place/dr.+tom+pet+clinic/@24.7639613,46.6242536,17z";
-export default function Contact(){const {isArabic}=useLanguage();const info=[[Phone,isArabic?"الهاتف":"Phone","+966533399462","tel:+966533399462"],[WhatsAppIcon,"WhatsApp","966533399462","https://wa.me/966533399462"],[Mail,isArabic?"البريد الإلكتروني":"Email","hello@drtom-clinic.com","mailto:hello@drtom-clinic.com"],[MapPin,isArabic?"العنوان":"Address",isArabic?"الرياض، العقيق، المملكة العربية السعودية":"Al Aqiq, Riyadh, Saudi Arabia",map]];return <section id="contact" className="py-20"><div className="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-8 items-stretch"><div className="rounded-3xl bg-card border border-border shadow-sm p-7 sm:p-9"><h3 className="text-xl font-extrabold">{isArabic?"معلومات التواصل":"Contact information"}</h3><div className="mt-6 space-y-4">{info.map(([Icon,t,d,href])=><a key={t} href={href} target={href.startsWith("http")?"_blank":undefined} rel="noreferrer" className="flex items-center gap-4 rounded-2xl bg-secondary/60 border border-border p-4"><div className="grid place-items-center w-11 h-11 rounded-xl bg-primary text-white"><Icon className="w-5 h-5"/></div><div><div className="text-sm text-muted-foreground font-semibold">{t}</div><div className="font-bold" dir={t==="Address"||t==="العنوان"?undefined:"ltr"}>{d}</div></div></a>)}<div className="rounded-2xl bg-secondary/60 border border-border p-4"><div className="flex items-center gap-4"><div className="grid place-items-center w-11 h-11 rounded-xl bg-brand text-white"><Share2 className="w-5 h-5"/></div><span className="font-semibold">{isArabic?"تابعنا":"Follow us"}</span></div><div className="mt-3 flex gap-3"><a href={FB} target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook className="w-5 h-5 text-primary"/></a><a href={TT} target="_blank" rel="noreferrer" aria-label="TikTok"><TikTokIcon className="w-5 h-5 text-primary"/></a></div></div></div></div><div className="flex flex-col gap-8"><div className="rounded-3xl bg-card border border-border shadow-sm p-7 sm:p-9"><h3 className="flex items-center gap-2 text-xl font-extrabold"><Clock className="w-5 h-5 text-brand"/>{isArabic?"مواعيد العمل":"Opening hours"}</h3><div className="mt-6 space-y-3">{[[isArabic?"يومياً (السبت إلى الخميس)":"Saturday–Thursday",isArabic?"على مدار الساعة":"Open 24 hours"],[isArabic?"الجمعة":"Friday",isArabic?"Closed 4 AM – 4 PM":"Closed 4 AM – 4 PM"]].map(([day,time])=><div key={day} className="flex justify-between rounded-2xl bg-secondary/60 border border-border p-4"><span className="font-bold text-primary">{time}</span><span className="text-sm text-muted-foreground">{day}</span></div>)}</div></div><div className="relative flex-1 rounded-3xl overflow-hidden border border-border min-h-[300px]"><iframe title={isArabic?"موقع العيادة":"Clinic location"} className="w-full h-full" style={{minHeight:300,border:0}} loading="lazy" src="https://www.google.com/maps?q=24.7639613,46.6242536&z=16&output=embed"/><a href={map} target="_blank" rel="noreferrer" className="absolute bottom-4 left-4 inline-flex gap-2 rounded-full bg-primary text-white px-4 py-2 text-sm font-bold"><MapPin className="w-4 h-4"/>{isArabic?"احصل على الاتجاهات":"Get directions"}</a></div></div></div></section>}
+import TikTokIcon from "@/components/drtom/TikTokIcon";
+import { WhatsAppIcon } from "@/components/drtom/icons";
+
+const FB = "https://www.facebook.com/p/%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9-%D8%AF-%D8%AA%D9%88%D9%85-%D8%A7%D9%84%D8%A8%D9%8A%D8%B7%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D9%82%D8%AF%D9%85%D8%A9-Dr-TOM-Pet-Clinic-100091919482521/";
+const TT = "https://www.tiktok.com/@drtompetclinic";
+
+const info = [
+  { icon: Phone, t: "الهاتف", d: "+966533399462", href: "tel:+966533399462" },
+  { icon: WhatsAppIcon, t: "واتساب", d: "966533399462", href: "https://wa.me/966533399462" },
+  { icon: Mail, t: "البريد الإلكتروني", d: "hello@drtom-clinic.com", href: "mailto:hello@drtom-clinic.com" },
+  { icon: MapPin, t: "العنوان", d: "الرياض، العقيق، المملكة العربية السعودية", href: "https://www.google.com/maps/place/dr.+tom+pet+clinic/@24.7639613,46.6242536,17z" },
+];
+
+const hours = [
+  { day: "يومياً (السبت إلى الخميس)", time: "على مدار الساعة", closed: false },
+  { day: "الجمعة (مغلق)", time: "مغلق من 4 صباحاً إلى 4 عصراً", closed: true },
+];
+
+export default function Contact() {
+  return (
+    <section id="contact" className="py-20">
+      <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-8 items-stretch">
+        {/* معلومات التواصل */}
+        <div className="rounded-3xl bg-card border border-border shadow-sm p-7 sm:p-9">
+          <h3 className="text-xl font-extrabold text-foreground">معلومات التواصل</h3>
+          <div className="mt-6 space-y-4">
+            {info.map(({ icon: Icon, t, d, href }) => (
+              <a key={t} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="flex items-center gap-4 rounded-2xl bg-secondary/60 border border-border p-4 hover:bg-secondary transition">
+                <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary text-primary-foreground shrink-0">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <div className="flex-1 text-center">
+                  <div className="text-sm text-muted-foreground font-semibold">{t}</div>
+                  <div className="text-base font-bold mt-0.5 text-foreground" dir="ltr">{d}</div>
+                </div>
+              </a>
+            ))}
+            <div className="rounded-2xl bg-secondary/60 border border-border p-4">
+              <div className="flex items-center gap-4">
+                <div className="grid place-items-center w-11 h-11 rounded-xl bg-brand text-brand-foreground shrink-0">
+                  <Share2 className="w-5 h-5" />
+                </div>
+                <div className="flex-1 text-center">
+                  <div className="text-sm text-muted-foreground font-semibold">تابعنا</div>
+                </div>
+              </div>
+              <div className="mt-3 flex items-center justify-center gap-3">
+                <a href={FB} target="_blank" rel="noopener noreferrer" className="grid place-items-center w-10 h-10 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition" aria-label="فيسبوك"><Facebook className="w-5 h-5" /></a>
+                <a href={TT} target="_blank" rel="noopener noreferrer" className="grid place-items-center w-10 h-10 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition" aria-label="تيك توك"><TikTokIcon className="w-5 h-5" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* مواعيد العمل + الخريطة */}
+        <div className="flex flex-col gap-8">
+          <div className="rounded-3xl bg-card border border-border shadow-sm p-7 sm:p-9">
+            <h3 className="flex items-center gap-2 text-xl font-extrabold text-foreground">
+              <Clock className="w-5 h-5 text-brand" /> مواعيد العمل
+            </h3>
+            <div className="mt-6 space-y-3">
+              {hours.map((r) => (
+                <div key={r.day} className="flex items-center justify-between gap-4 rounded-2xl bg-secondary/60 border border-border p-4">
+                  <span className={`text-base font-bold ${r.closed ? "text-brand" : "text-primary"}`}>{r.time}</span>
+                  <span className="text-sm text-muted-foreground font-semibold text-left">{r.day}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative flex-1 rounded-3xl overflow-hidden border border-border min-h-[300px] bg-secondary/40">
+            <iframe
+              title="موقع عيادة دكتور توم"
+              className="w-full h-full"
+              style={{ minHeight: 300, border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=24.7639613,46.6242536&z=16&output=embed"
+            />
+            <a href="https://www.google.com/maps/place/dr.+tom+pet+clinic/@24.7639613,46.6242536,17z" target="_blank" rel="noopener noreferrer" className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-bold shadow-lg hover:bg-primary/90 transition">
+              <MapPin className="w-4 h-4" /> احصل على الاتجاهات
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,4 +1,25 @@
 import { Heart, ShieldCheck, HandHeart } from "lucide-react";
-import { useLanguage } from "@/lib/LanguageContext";
-const icons=[Heart,ShieldCheck,HandHeart];const ar=[["نؤمن بأن أليفك أليفنا","لذا نقدّم الأفضل دائماً دون أدنى تردد؛ لأن أليفك يستحق الاهتمام."],["نؤمن بأننا نستحق الثقة","لأننا نهتم بجميع التفاصيل الطبية الدقيقة التي تجعلنا خيارك الأول، إضافة إلى الرفاهية العالية التي تصنع الاختلاف."],["نبذل قصارى جهدنا","لنقوم بدورنا تجاه الحيوانات الأليفة؛ لأن أليفك أمانة يجب أن نعتني به ونحافظ عليه."]];const en=[["Your pet is our pet","We always give our best, because your pet deserves attentive care."],["We earn your trust","We focus on the medical details that make us your first choice, together with exceptional wellbeing."],["We give our utmost","We embrace our responsibility toward pets, caring for and protecting the trust you place in us."]];
-export default function Beliefs(){const {isArabic}=useLanguage();return <section className="py-20 bg-brand text-white"><div className="mx-auto max-w-7xl px-4 grid md:grid-cols-3 gap-8">{(isArabic?ar:en).map(([t,d],i)=>{const Icon=icons[i];return <div key={t} className="text-center"><div className="mx-auto grid place-items-center w-16 h-16 rounded-full bg-white/15"><Icon className="w-8 h-8" /></div><h3 className="mt-5 text-xl font-extrabold">{t}</h3><p className="mt-3 text-white/85 leading-7">{d}</p></div>})}</div></section>}
+
+const items = [
+  { icon: Heart, t: "نؤمن بأن أليفك أليفنا", d: "لذا نقدّم الأفضل دائماً دون أدنى تردد؛ لأن أليفك يستحق الاهتمام." },
+  { icon: ShieldCheck, t: "نؤمن بأننا نستحق الثقة", d: "لأننا نهتم بجميع التفاصيل الطبية الدقيقة التي تجعلنا خيارك الأول، إضافة إلى الرفاهية العالية التي تصنع الاختلاف." },
+  { icon: HandHeart, t: "نبذل قصارى جهدنا", d: "لنقوم بدورنا تجاه الحيوانات الأليفة؛ لأن أليفك أمانة يجب أن نعتني به ونحافظ عليه." },
+];
+
+export default function Beliefs() {
+  return (
+    <section className="py-20 bg-brand text-white">
+      <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-3 gap-8">
+        {items.map(({ icon: Icon, t, d }) => (
+          <div key={t} className="text-center">
+            <div className="mx-auto grid place-items-center w-16 h-16 rounded-full bg-white/15">
+              <Icon className="w-8 h-8" />
+            </div>
+            <h3 className="mt-5 text-xl font-extrabold">{t}</h3>
+            <p className="mt-3 text-white/85 leading-7">{d}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

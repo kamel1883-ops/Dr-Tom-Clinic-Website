@@ -1,4 +1,33 @@
-import DoctorsMarquee from "@/components/drtom/DoctorsMarquee";
-import { useLanguage } from "@/lib/LanguageContext";
-const docs=[[["د. عبد الرحمن يسري","Dr. Abdulrahman Yousry"],"https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/24bedaa91_image.png"],[["د. محمد عنتر","Dr. Mohamed Antar"],"https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/180b1e4f3_image.png"],[["د. مروى مسعد","Dr. Marwa Massaad"],"https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/d832992a8_image.png"],[["د. ماير ميشيل","Dr. Mayer Michel"],"https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/1d4378b22_image.png"],[["د. عمر سنبل","Dr. Omar Sonbol"],"https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/435af6a9b_image.png"]];
-export default function Team(){const {isArabic}=useLanguage();return <section id="team" className="py-20 bg-secondary/40"><div className="mx-auto max-w-7xl px-4"><div className="text-center"><span className="inline-block rounded-full bg-brand text-brand-foreground text-sm font-bold px-4 py-1.5">{isArabic?"فريقنا":"Our team"}</span><h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-foreground">{isArabic?"أطباؤنا المتخصصون":"Our specialist veterinarians"}</h2><p className="mt-3 max-w-2xl mx-auto text-muted-foreground leading-8">{isArabic?"فريق من الأطباء البيطريين المؤهلين المخصصين لصحة أليفك.":"A team of qualified veterinarians dedicated to your pet’s health."}</p></div><DoctorsMarquee doctors={docs} isArabic={isArabic} /></div></section>}
+import DoctorCard from "@/components/drtom/DoctorCard";
+
+const teamImg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/9fbdc5bea_Screenshot2026-08-29134546.png";
+
+const docs = [
+  { n: "د. عبد الرحمن يسري", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/24bedaa91_image.png" },
+  { n: "د. محمد عنتر", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/180b1e4f3_image.png" },
+  { n: "د. مروى مسعد", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/d832992a8_image.png" },
+  { n: "د. ماير ميشيل", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/1d4378b22_image.png" },
+  { n: "د. عمر سنبل", img: "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/435af6a9b_image.png" },
+];
+
+export default function Team() {
+  return (
+    <section id="team" className="py-20 bg-secondary/40">
+      <div className="mx-auto max-w-7xl px-4">
+        <div className="text-center">
+          <span className="inline-block rounded-full bg-brand text-brand-foreground text-sm font-bold px-4 py-1.5">فريقنا</span>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-foreground">أطباؤنا المتخصصون</h2>
+          <p className="mt-3 max-w-2xl mx-auto text-muted-foreground leading-8">
+            فريق من الأطباء البيطريين المؤهلين المخصصين لصحة أليفك.
+          </p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 justify-items-center">
+          {docs.map((d) => (
+            <DoctorCard key={d.n} name={d.n} img={d.img} pos={d.pos} teamImg={teamImg} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
