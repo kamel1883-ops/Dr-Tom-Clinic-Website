@@ -5,7 +5,7 @@ import { Image } from "@/components/ui/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
 const slides = { ar: ["دكتور توم أكثر من مجرد عيادة", "قسم الرعاية الطبية بكافة تخصصاتها على مدار 24 ساعة", "قسم الاستضافة الطبية برعاية طبية على مدار 24 ساعة", "قسم القرومنق (شاور وحلاقة) على مدار 24 ساعة", "قسم التسوق لاحتياجات أليفك على مدار 24 ساعة", "استمتع بالحديقة والممشى على مدار 24 ساعة"], en: ["Dr. Tom is more than a clinic", "Comprehensive medical care, 24 hours a day", "Medical boarding with round-the-clock care", "Professional grooming, 24 hours a day", "Pet essentials shopping, 24 hours a day", "Enjoy our garden and walking trail, 24 hours a day"] };
-const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/92f05f119_generated_image.png";
+const bg = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/db7f8f386_generated_image.png";
 
 export default function Hero() {
   const [i, setI] = useState(0); const { language, isArabic } = useLanguage(); const copy = slides[language];
