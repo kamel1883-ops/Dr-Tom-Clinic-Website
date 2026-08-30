@@ -33,7 +33,7 @@ export default function Hero() {
       />
 
       <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-transparent to-black/30" />
-      <div className="absolute z-10 right-4 sm:right-8 top-1/2 -translate-y-1/2 max-w-md text-white">
+      <div className="absolute z-10 right-4 sm:right-8 top-[58%] -translate-y-1/2 max-w-md text-white">
         <div className="rounded-3xl bg-primary/35 backdrop-blur-md border border-white/20 p-6 sm:p-7 text-right">
           <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold backdrop-blur">
             اختر الخدمة التي تحتاجها لأليفك
