@@ -14,7 +14,7 @@ export default function Brochure() {
   return (
     <div dir={isAr ? "rtl" : "ltr"} className="min-h-screen bg-secondary/40 font-body">
       {/* Controls */}
-      <div className="bg-primary text-white">
+      <div className="bg-primary text-white print:hidden">
         <div className="mx-auto max-w-5xl px-4 h-12 flex items-center justify-end gap-2">
           <Button
             size="sm"
