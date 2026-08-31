@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Globe, Printer, Lock } from "lucide-react";
+import { Globe, Printer } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import { Button } from "@/components/ui/button";
 import BrochureAr from "@/components/drtom/brochure/BrochureAr";
@@ -13,29 +13,22 @@ export default function Brochure() {
 
   return (
     <div dir={isAr ? "rtl" : "ltr"} className="min-h-screen bg-secondary/40 font-body">
-      {/* Top utility bar — internal only */}
-      <div className="sticky top-0 z-50 bg-primary text-white">
-        <div className="mx-auto max-w-5xl px-4 h-14 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2 text-sm font-bold">
-            <Lock className="w-4 h-4 text-brand" />
-            <span>قسم البروشور · Brochure Section</span>
-            <span className="hidden sm:inline text-white/60 font-normal">— للاستخدام الداخلي على منصة Base44</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Button
-              size="sm"
-              variant="secondary"
-              className="gap-2"
-              onClick={() => setLang(isAr ? "en" : "ar")}
-            >
-              <Globe className="w-4 h-4" />
-              {isAr ? "English" : "العربية"}
-            </Button>
-            <Button size="sm" variant="secondary" className="gap-2 hidden sm:inline-flex" onClick={() => window.print()}>
-              <Printer className="w-4 h-4" />
-              {isAr ? "طباعة" : "Print"}
-            </Button>
-          </div>
+      {/* Controls */}
+      <div className="bg-primary text-white">
+        <div className="mx-auto max-w-5xl px-4 h-12 flex items-center justify-end gap-2">
+          <Button
+            size="sm"
+            variant="secondary"
+            className="gap-2"
+            onClick={() => setLang(isAr ? "en" : "ar")}
+          >
+            <Globe className="w-4 h-4" />
+            {isAr ? "English" : "العربية"}
+          </Button>
+          <Button size="sm" variant="secondary" className="gap-2 hidden sm:inline-flex" onClick={() => window.print()}>
+            <Printer className="w-4 h-4" />
+            {isAr ? "طباعة" : "Print"}
+          </Button>
         </div>
       </div>
 
@@ -62,8 +55,8 @@ export default function Brochure() {
       <footer className="border-t border-border bg-white">
         <div className="mx-auto max-w-5xl px-6 py-6 text-center text-xs text-muted-foreground">
           {isAr
-            ? "© 2026 عيادة دكتور توم البيطرية المتقدمة — هذا البروشور للاستخدام الداخلي على منصة Base44 فقط."
-            : "© 2026 Dr. TOM Advanced Veterinary Clinic — This brochure is for internal use on the Base44 platform only."}
+            ? "© 2026 عيادة دكتور توم البيطرية المتقدمة"
+            : "© 2026 Dr. TOM Advanced Veterinary Clinic"}
         </div>
       </footer>
     </div>
