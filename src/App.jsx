@@ -12,6 +12,7 @@ import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import RefundPolicy from '@/pages/RefundPolicy';
 import Blog from '@/pages/Blog';
 import BlogPost from '@/pages/BlogPost';
+import Brochure from '@/pages/Brochure';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -45,6 +46,7 @@ const AuthenticatedApp = () => {
       <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/refund-policy" element={<RefundPolicy />} />
+      <Route path="/brochure" element={<Brochure />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
