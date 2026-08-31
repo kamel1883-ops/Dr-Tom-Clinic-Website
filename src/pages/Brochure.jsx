@@ -37,7 +37,7 @@ export default function Brochure() {
         <div className="mx-auto max-w-5xl px-6 py-12 flex flex-col items-center text-center">
           <Image src={LOGO} fittingType="fit" className="h-24 w-56 drop-shadow-lg" />
           <h1 className="mt-6 text-3xl sm:text-4xl font-extrabold">
-            {isAr ? "عيادة دكتور توم البيطرية المتقدمة" : "Dr. TOM Advanced Veterinary Clinic"}
+            {isAr ? "عيادة دكتور توم البيطرية" : "Dr Tom Pet Clinic"}
           </h1>
           <p className="mt-2 text-brand font-bold">
             {isAr ? "ملتقى الطب والترفيه" : "Where Medicine Meets Joy"}
@@ -55,8 +55,8 @@ export default function Brochure() {
       <footer className="border-t border-border bg-white">
         <div className="mx-auto max-w-5xl px-6 py-6 text-center text-xs text-muted-foreground">
           {isAr
-            ? "© 2026 عيادة دكتور توم البيطرية المتقدمة"
-            : "© 2026 Dr. TOM Advanced Veterinary Clinic"}
+            ? "© 2026 عيادة دكتور توم البيطرية"
+            : "© 2026 Dr Tom Pet Clinic"}
         </div>
       </footer>
     </div>
