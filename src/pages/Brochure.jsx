@@ -48,7 +48,7 @@ export default function Brochure() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 sm:px-6 py-10">
+      <main className="brochure mx-auto max-w-5xl px-4 sm:px-6 py-10">
         {isAr ? <BrochureAr /> : <BrochureEn />}
       </main>
 
