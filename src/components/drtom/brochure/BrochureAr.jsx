@@ -5,6 +5,9 @@ import {
 } from "lucide-react";
 import TikTokIcon from "@/components/drtom/TikTokIcon";
 import { WhatsAppIcon } from "@/components/drtom/icons";
+import { Image } from "@/components/ui/image";
+
+const STORY_IMG = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/50b83f965_generated_image.png";
 
 const vmg = [
   { icon: Eye, t: "رؤيتنا", d: "أن نكون العيادة البيطرية الرائدة في المملكة العربية السعودية، ومرجعاً موثوقاً في الرعاية الطبية المتقدمة للحيوانات الأليفة، مع دمج الترفيه برفقية عالية في تجربة فريدة." },
@@ -83,11 +86,15 @@ export default function BrochureAr() {
               ))}
             </ul>
           </Card>
-          <Card className="bg-brand text-white flex flex-col justify-center text-center">
-            <span className="text-brand-foreground/80 text-sm font-bold">شعارنا</span>
-            <p className="mt-2 text-lg font-extrabold leading-relaxed">ملتقى الطب والترفيه</p>
-            <p className="mt-2 text-white/85 text-sm leading-7">رعاية طبية ورفاهية متكاملة لأليفك على مدار الساعة.</p>
-          </Card>
+          <div className="relative overflow-hidden rounded-2xl ring-1 ring-border shadow-sm min-h-[260px]">
+            <Image src={STORY_IMG} fittingType="fill" focalPointX={0.5} focalPointY={0.4} className="absolute inset-0 w-full h-full" alt="عيادة دكتور توم" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/85 to-transparent" />
+            <div className="absolute bottom-0 inset-x-0 p-5 text-white text-center">
+              <span className="text-brand text-xs font-bold">شعارنا</span>
+              <p className="mt-1 text-lg font-extrabold leading-relaxed">ملتقى الطب والترفيه</p>
+              <p className="mt-1 text-white/85 text-sm leading-7">رعاية طبية ورفاهية متكاملة لأليفك على مدار الساعة.</p>
+            </div>
+          </div>
         </div>
       </section>
 

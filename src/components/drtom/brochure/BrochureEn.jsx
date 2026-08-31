@@ -5,6 +5,9 @@ import {
 } from "lucide-react";
 import TikTokIcon from "@/components/drtom/TikTokIcon";
 import { WhatsAppIcon } from "@/components/drtom/icons";
+import { Image } from "@/components/ui/image";
+
+const STORY_IMG = "https://media.base44.com/images/public/6a92a06f32c39b0226f9e8c3/50b83f965_generated_image.png";
 
 const vmg = [
   { icon: Eye, t: "Our Vision", d: "To be the leading veterinary clinic in the Kingdom of Saudi Arabia and a trusted reference in advanced pet medical care, blending recreation with refined hospitality in a unique experience." },
@@ -80,11 +83,15 @@ export default function BrochureEn() {
               ))}
             </ul>
           </Card>
-          <Card className="bg-brand text-white flex flex-col justify-center text-center">
-            <span className="text-brand-foreground/80 text-sm font-bold">Our Motto</span>
-            <p className="mt-2 text-lg font-extrabold leading-relaxed">Where Medicine Meets Joy</p>
-            <p className="mt-2 text-white/85 text-sm leading-7">Round-the-clock, complete medical care and well-being for your pet.</p>
-          </Card>
+          <div className="relative overflow-hidden rounded-2xl ring-1 ring-border shadow-sm min-h-[260px]">
+            <Image src={STORY_IMG} fittingType="fill" focalPointX={0.5} focalPointY={0.4} className="absolute inset-0 w-full h-full" alt="Dr. TOM clinic" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/85 to-transparent" />
+            <div className="absolute bottom-0 inset-x-0 p-5 text-white text-center">
+              <span className="text-brand text-xs font-bold">Our Motto</span>
+              <p className="mt-1 text-lg font-extrabold leading-relaxed">Where Medicine Meets Joy</p>
+              <p className="mt-1 text-white/85 text-sm leading-7">Round-the-clock, complete medical care and well-being for your pet.</p>
+            </div>
+          </div>
         </div>
       </section>
 
