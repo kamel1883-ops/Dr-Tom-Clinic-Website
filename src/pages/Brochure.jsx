@@ -43,7 +43,7 @@ export default function Brochure() {
             {isAr ? "ملتقى الطب والترفيه" : "Where Medicine Meets Joy"}
           </p>
           <span className="mt-4 inline-block rounded-full bg-white/15 px-4 py-1.5 text-xs font-semibold backdrop-blur">
-            {isAr ? "بروفايل تعريفي احترافي" : "Professional Profile Brochure"}
+            {isAr ? "بروفايل تعريفي" : "Profile Brochure"}
           </span>
         </div>
       </header>
